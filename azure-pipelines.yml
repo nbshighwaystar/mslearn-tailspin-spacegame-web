@@ -12,10 +12,9 @@ variables:
   dotnetSdkVersion: '2.1.505
 
 steps:
-- task: UseDotNet@2
+- task: DotNetCoreInstaller@0
   displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
   inputs:
-    packageType: sdk
     version: $(dotnetSdkVersion)
 
 - task: Npm@1
